@@ -37,9 +37,7 @@ export class GeneratorService {
       // Excel construction
       const excelService = new ExcelService();
       excelService.setTitle(payload.title);
-      excelService.setTitle(payload.subtitle);
       excelService.setFormat(payload.format);
-      excelService.setFilters(payload.data);
       excelService.setHeaders(model_data.titles);
       excelService.setColumns(model_data.model);
       excelService.setPayload(data);

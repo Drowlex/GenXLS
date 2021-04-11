@@ -8,11 +8,6 @@ export class CreateGeneratorDto {
     @IsNotEmpty()
     @IsString()
     title: string;  
-
-    @ApiProperty({ type: String, example: "Report Test Subtitle", description: 'Receive the title of the report' })
-    @IsNotEmpty()
-    @IsString()
-    subtitle: string;    
     
     @ApiProperty({ type: String, example: "DD/MM/YYYY", description: 'Receive date format' })
     @IsNotEmpty()
