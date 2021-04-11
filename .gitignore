@@ -35,3 +35,4 @@ lerna-debug.log*
 
 /export
 # *.env
+version.txt
