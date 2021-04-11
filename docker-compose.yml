@@ -1,0 +1,26 @@
+version: "3.5"
+services:
+    #Service NestJS
+    nest:
+        image: nest-genxls
+        hostname: nestGenXLS
+        container_name: nestGenXLS
+        # build: .
+        build:
+            context: ./
+            dockerfile: nest.dockerfile
+        ports: 
+            - "8400:8400"
+        networks:
+            - GenXLS-network-repl
+        volumes: 
+            - .:/code
+        env_file: 
+            - .env
+        environment: 
+          NODE_ENV: start:dev
+
+networks:
+    GenXLS-network-repl:
+        name: GenXLS-network-repl
+        driver: bridge
